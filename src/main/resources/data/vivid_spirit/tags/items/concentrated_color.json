@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "kubejs:concentrated_black",
+    "kubejs:concentrated_blue",
+    "kubejs:concentrated_brown",
+    "kubejs:concentrated_cyan",
+    "kubejs:concentrated_gray",
+    "kubejs:concentrated_green",
+    "kubejs:concentrated_light_gray",
+    "kubejs:concentrated_light_blue",
+    "kubejs:concentrated_lime",
+    "kubejs:concentrated_magenta",
+    "kubejs:concentrated_orange",
+    "kubejs:concentrated_pink",
+    "kubejs:concentrated_white",
+    "kubejs:concentrated_yellow",
+    "kubejs:concentrated_purple",
+    "kubejs:concentrated_red"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "vivid_spirit",
+	"version": "${version}",
+	"name": "Vivid Spirit Core",
+	"description": "Core mod for the Vivid Spirit Modpack.",
+	"authors": [
+		"CosmicApiary"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/vivid_spirit/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.cosmicapiary.vivid_spirit.VividSpirit"
+		],
+		"client": [
+			"net.cosmicapiary.vivid_spirit.VividClient"
+		],
+		"fabric-datagen": [
+		]
+	},
+	"mixins": [
+		"vivid_spirit.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"spectrum": "*",
+		"paradise_lost": "*",
+		"galosphere": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

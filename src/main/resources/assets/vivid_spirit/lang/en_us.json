@@ -1,0 +1,28 @@
+{
+  "item.vivid_spirit.spirit_bucket": "Spirit Bucket",
+  "item.vivid_spirit.pure_ruby": "Pure Ruby",
+  "item.vivid_spirit.pure_silver": "Pure Silver",
+  "item.vivid_spirit.raw_silver_nugget": "Raw Silver Nugget",
+  "item.vivid_spirit.liquid_pearls": "Liquid Pearls",
+
+  "item.vivid_spirit.topaz_tuned_shard": "Topaz Tuned Shard",
+
+
+  "block.vivid_spirit.spirit": "Spirit",
+
+  "block.vivid_spirit.black_ice": "Black Ice",
+  "block.vivid_spirit.blackslag_zinc_ore": "Blackslag Zinc Ore",
+  "block.vivid_spirit.large_ruby_bud": "Large Ruby Bud",
+  "block.vivid_spirit.small_ruby_bud": "Small Ruby Bud",
+  "block.vivid_spirit.pure_ruby_block": "Pure Ruby Block",
+  "block.vivid_spirit.ruby_cluster": "Ruby Cluster",
+  "block.vivid_spirit.large_silver_bud": "Large Silver Bud",
+  "block.vivid_spirit.small_silver_bud": "Small Silver Bud",
+  "block.vivid_spirit.pure_silver_block": "Pure Silver Block",
+  "block.vivid_spirit.silver_cluster": "Silver Cluster",
+  "block.vivid_spirit.blackslag_silver_ore": "Blackslag Silver Ore",
+  "block.vivid_spirit.starry_clump": "Starry Clump",
+  "block.vivid_spirit.decayed_onyx": "Decayed Onyx",
+  "block.vivid_spirit.shimmerstone_ore": "Shimmerstone Ore"
+
+}

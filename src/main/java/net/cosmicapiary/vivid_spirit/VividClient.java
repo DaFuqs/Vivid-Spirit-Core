@@ -1,0 +1,30 @@
+package net.cosmicapiary.vivid_spirit;
+
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.util.Identifier;
+
+public class VividClient implements ClientModInitializer {
+    @Override
+    public void onInitializeClient() {
+        FluidRenderHandlerRegistry.INSTANCE.register(VividSpirit.STILL_SPIRIT, VividSpirit.FLOWING_SPIRIT, new SimpleFluidRenderHandler(
+                new Identifier("vivid_spirit:block/spirit_still"),
+                new Identifier("vivid_spirit:block/spirit_flow"),
+                0x0000ffff
+        ));
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getSolid(), VividSpirit.STILL_SPIRIT, VividSpirit.FLOWING_SPIRIT);
+        BlockRenderLayerMap.INSTANCE.putBlock(VividSpirit.BLACK_ICE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(VividSpirit.SMALL_RUBY_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VividSpirit.LARGE_RUBY_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VividSpirit.RUBY_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VividSpirit.SMALL_SILVER_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VividSpirit.LARGE_SILVER_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VividSpirit.SILVER_CLUSTER, RenderLayer.getCutout());
+
+    }
+
+
+}
