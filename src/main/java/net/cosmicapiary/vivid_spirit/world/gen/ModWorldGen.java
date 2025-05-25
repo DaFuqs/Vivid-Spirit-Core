@@ -24,6 +24,8 @@ public class ModWorldGen {
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "pl_shimmerstone"));
     public static final RegistryKey<PlacedFeature> PL_ONYX =
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "pl_onyx"));
+    public static final RegistryKey<PlacedFeature> PL_REDSTONE =
+            RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "pl_redstone"));
 
 
     public static final RegistryKey<PlacedFeature> LUMISENE_LAKE =
@@ -44,7 +46,8 @@ public class ModWorldGen {
                 GenerationStep.Feature.UNDERGROUND_ORES, PL_SHIMMERSTONE);
         BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
                 GenerationStep.Feature.UNDERGROUND_ORES, PL_ONYX);
-
+        BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
+                GenerationStep.Feature.UNDERGROUND_ORES, PL_REDSTONE);
        // BiomeModifications.addFeature(BiomeSelectors.tag(VividStructures.PARADISE_LOST),
         //        GenerationStep.Feature.UNDERGROUND_ORES, ONYX_METEOR);
 

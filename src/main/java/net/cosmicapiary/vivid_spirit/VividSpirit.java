@@ -3,6 +3,7 @@ package net.cosmicapiary.vivid_spirit;
 import de.dafuqs.spectrum.blocks.geology.ShimmerstoneOreBlock;
 import de.dafuqs.spectrum.registries.SpectrumAdvancements;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
+import de.dafuqs.spectrum.registries.SpectrumStatusEffects;
 import net.cosmicapiary.vivid_spirit.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 
@@ -10,12 +11,11 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.id.paradiselost.blocks.ParadiseLostBlocks;
 import net.minecraft.block.*;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.BucketItem;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.fluid.FlowableFluid;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
@@ -29,12 +29,10 @@ public class VividSpirit implements ModInitializer {
 	public static FlowableFluid FLOWING_SPIRIT;
 	public static Item SPIRIT_BUCKET;
 	public static Block SPIRIT;
-
 	@Override
 	public void onInitialize() {
 		ModWorldGen.addFeatures();
 		ModItemGroups.registerItemGroups();
-
 
 		LOGGER.info("Self-replicating blue goo initialization process...");
 
@@ -62,8 +60,9 @@ public class VividSpirit implements ModInitializer {
 			new Item(new FabricItemSettings()));
 	public static final Item PURE_SILVER = registerItem("pure_silver",
 			new Item(new FabricItemSettings()));
+
 	public static final Item LIQUID_PEARLS = registerItem("liquid_pearls",
-			new Item(new FabricItemSettings()));
+			new Item(liquidPearlSettings()));
 
 
 	public static final Block BLACKSLAG_ZINC_ORE = registerBlock("blackslag_zinc_ore",
@@ -79,7 +78,9 @@ public class VividSpirit implements ModInitializer {
 			new ShimmerstoneOreBlock(FabricBlockSettings.copyOf(SpectrumBlocks.SHIMMERSTONE_ORE).ticksRandomly(),
 					UniformIntProvider.create(2, 4), SpectrumAdvancements.REVEAL_SHIMMERSTONE, ParadiseLostBlocks.FLOESTONE.getDefaultState()
 			));
-
+	public static final Block FLOESTONE_REDSTONE_ORE = registerBlock("floestone_redstone_ore",
+			new RedstoneOreBlock(FabricBlockSettings.copyOf(Blocks.REDSTONE_ORE)
+			));
 	public static final Block PURE_RUBY_BLOCK = registerBlock("pure_ruby_block",
 			new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK)
 			));
@@ -118,5 +119,15 @@ public class VividSpirit implements ModInitializer {
 	}
 	private static Item registerItem(String name, Item item) {
 		return Registry.register(Registries.ITEM, new Identifier(VividSpirit.MOD_ID, name), item);
+	}
+
+	private static FabricItemSettings liquidPearlSettings() {
+		return new FabricItemSettings().food(new FoodComponent.Builder().hunger(2).saturationModifier((float) 0.0)
+				.statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 300, 0), 0.5F)
+				.statusEffect(new StatusEffectInstance(SpectrumStatusEffects.SOMNOLENCE, 300, 0), 0.5F)
+				.statusEffect(new StatusEffectInstance(SpectrumStatusEffects.NOURISHING, 40, 0), 0.5F)
+				.statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1, 1), 0.5F)
+				.alwaysEdible()
+				.snack().build());
 	}
 }

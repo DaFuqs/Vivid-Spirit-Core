@@ -31,6 +31,7 @@ public class ModItemGroups {
         entries.add(VividSpirit.STARRY_CLUMP);
         entries.add(VividSpirit.LIQUID_PEARLS);
         entries.add(VividSpirit.SHIMMERSTONE_ORE);
+        entries.add(VividSpirit.FLOESTONE_REDSTONE_ORE);
         //entries.add(VividSpirit.DECAYED_ONYX);
 
 
