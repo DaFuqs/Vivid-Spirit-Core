@@ -2,6 +2,11 @@
   "replace": false,
   "values": [
     "vivid_spirit:black_ice",
+    "vivid_spirit:sapphire_tiles",
+    "vivid_spirit:small_sapphire_tiles",
+    "vivid_spirit:large_sapphire_tiles",
+    "vivid_spirit:sapphire_ice",
+    "vivid_spirit:sapphire_packed_ice",
     "vivid_spirit:blackslag_silver_ore",
     "vivid_spirit:pure_ruby_block",
     "vivid_spirit:large_ruby_bud",

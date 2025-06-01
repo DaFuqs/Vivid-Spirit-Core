@@ -32,6 +32,14 @@ public class ModItemGroups {
         entries.add(VividSpirit.LIQUID_PEARLS);
         entries.add(VividSpirit.SHIMMERSTONE_ORE);
         entries.add(VividSpirit.FLOESTONE_REDSTONE_ORE);
+        entries.add(VividSpirit.SAPPHIRE_ICE);
+        entries.add(VividSpirit.SAPPHIRE_TILES);
+        entries.add(VividSpirit.SAPPHIRE_PACKED_ICE);
+        entries.add(VividSpirit.SMALL_SAPPHIRE_TILES);
+        entries.add(VividSpirit.LARGE_SAPPHIRE_TILES);
+        entries.add(VividSpirit.FROZEN_RUBY);
+        entries.add(VividSpirit.FROZEN_RUBY_SHARD);
+        entries.add(VividSpirit.TOFU);
         //entries.add(VividSpirit.DECAYED_ONYX);
 
 

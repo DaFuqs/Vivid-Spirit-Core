@@ -1,26 +1,29 @@
 package net.cosmicapiary.vivid_spirit;
 
 import de.dafuqs.spectrum.blocks.geology.ShimmerstoneOreBlock;
+import de.dafuqs.spectrum.items.trinkets.InkDrainTrinketItem;
 import de.dafuqs.spectrum.registries.SpectrumAdvancements;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
-import de.dafuqs.spectrum.registries.SpectrumStatusEffects;
+
 import net.cosmicapiary.vivid_spirit.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
+
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.id.paradiselost.blocks.ParadiseLostBlocks;
 import net.minecraft.block.*;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import net.cosmicapiary.vivid_spirit.LifeStealRingItem;
+
 
 public class VividSpirit implements ModInitializer {
 	public static final String MOD_ID = "vivid_spirit";
@@ -61,7 +64,13 @@ public class VividSpirit implements ModInitializer {
 	public static final Item PURE_SILVER = registerItem("pure_silver",
 			new Item(new FabricItemSettings()));
 
+	public static final Item FROZEN_RUBY = registerItem("frozen_ruby",
+			new Item(new FabricItemSettings()));
+	public static final Item FROZEN_RUBY_SHARD = registerItem("frozen_ruby_shard",
+			new Item(new FabricItemSettings()));
 	public static final Item LIQUID_PEARLS = registerItem("liquid_pearls",
+			new Item(liquidPearlSettings()));
+	public static final Item TOFU = registerItem("tofu",
 			new Item(liquidPearlSettings()));
 
 
@@ -73,6 +82,21 @@ public class VividSpirit implements ModInitializer {
 			));
 	public static final Block STARRY_CLUMP = registerBlock("starry_clump",
 			new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE)
+			));
+	public static final Block SAPPHIRE_TILES = registerBlock("sapphire_tiles",
+			new Block(FabricBlockSettings.copyOf(Blocks.BLUE_GLAZED_TERRACOTTA)
+			));
+	public static final Block SMALL_SAPPHIRE_TILES = registerBlock("small_sapphire_tiles",
+			new Block(FabricBlockSettings.copyOf(Blocks.BLUE_GLAZED_TERRACOTTA)
+			));
+	public static final Block LARGE_SAPPHIRE_TILES = registerBlock("large_sapphire_tiles",
+			new Block(FabricBlockSettings.copyOf(Blocks.BLUE_GLAZED_TERRACOTTA)
+			));
+	public static final Block SAPPHIRE_ICE = registerBlock("sapphire_ice",
+			new Block(FabricBlockSettings.copyOf(Blocks.PACKED_ICE).nonOpaque()
+			));
+	public static final Block SAPPHIRE_PACKED_ICE = registerBlock("sapphire_packed_ice",
+			new Block(FabricBlockSettings.copyOf(Blocks.BLUE_ICE).nonOpaque()
 			));
 	public static final Block SHIMMERSTONE_ORE = registerBlock("shimmerstone_ore",
 			new ShimmerstoneOreBlock(FabricBlockSettings.copyOf(SpectrumBlocks.SHIMMERSTONE_ORE).ticksRandomly(),
@@ -121,13 +145,21 @@ public class VividSpirit implements ModInitializer {
 		return Registry.register(Registries.ITEM, new Identifier(VividSpirit.MOD_ID, name), item);
 	}
 
+	private static Item registerTrinket(String name, InkDrainTrinketItem item) {
+		return Registry.register(Registries.ITEM, new Identifier(VividSpirit.MOD_ID, name), item);
+	}
+
 	private static FabricItemSettings liquidPearlSettings() {
-		return new FabricItemSettings().food(new FoodComponent.Builder().hunger(2).saturationModifier((float) 0.0)
-				.statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 300, 0), 0.5F)
-				.statusEffect(new StatusEffectInstance(SpectrumStatusEffects.SOMNOLENCE, 300, 0), 0.5F)
-				.statusEffect(new StatusEffectInstance(SpectrumStatusEffects.NOURISHING, 40, 0), 0.5F)
-				.statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1, 1), 0.5F)
+		return new FabricItemSettings().food(new FoodComponent.Builder().hunger(4).saturationModifier((float) 0.4)
 				.alwaysEdible()
 				.snack().build());
+	}
+
+	public static class IS {
+
+		public static FabricItemSettings of(int maxCount, Rarity rarity) {
+			return new FabricItemSettings().maxCount(maxCount).rarity(rarity);
+		}
+
 	}
 }

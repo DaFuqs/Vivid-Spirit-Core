@@ -4,12 +4,19 @@
   "item.vivid_spirit.pure_silver": "Pure Silver",
   "item.vivid_spirit.raw_silver_nugget": "Raw Silver Nugget",
   "item.vivid_spirit.liquid_pearls": "Liquid Pearls",
+  "item.vivid_spirit.frozen_ruby": "Frozen Ruby",
+  "item.vivid_spirit.frozen_ruby_shard": "Frozen Ruby Shard",
+  "item.vivid_spirit.tofu": "Tofu",
 
   "item.vivid_spirit.topaz_tuned_shard": "Topaz Tuned Shard",
 
-
   "block.vivid_spirit.spirit": "Spirit",
 
+  "block.vivid_spirit.sapphire_tiles": "Sapphire Tiles",
+  "block.vivid_spirit.small_sapphire_tiles": "Small Sapphire Tiles",
+  "block.vivid_spirit.large_sapphire_tiles": "Large Sapphire Tiles",
+  "block.vivid_spirit.sapphire_ice": "Sapphire Ice",
+  "block.vivid_spirit.sapphire_packed_ice": "Sapphire Packed Ice",
   "block.vivid_spirit.black_ice": "Black Ice",
   "block.vivid_spirit.blackslag_zinc_ore": "Blackslag Zinc Ore",
   "block.vivid_spirit.large_ruby_bud": "Large Ruby Bud",

@@ -9,7 +9,7 @@ import net.minecraft.world.gen.structure.Structure;
 public class VividStructures {
     TagKey<Structure> TOPAZ_GEODE = of("topaz_geode");
 
-    public static final TagKey<Biome> PARADISE_LOST = with("paradise_lost");
+    public static final TagKey<Biome> COLD = with("cold");
 
     private static TagKey<Structure> of(String id) {
         return TagKey.of(RegistryKeys.STRUCTURE, new Identifier(id));
