@@ -22,7 +22,6 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import net.cosmicapiary.vivid_spirit.LifeStealRingItem;
 
 
 public class VividSpirit implements ModInitializer {

@@ -3,7 +3,6 @@ package net.cosmicapiary.vivid_spirit.world.gen;
 import de.dafuqs.spectrum.SpectrumCommon;
 import de.dafuqs.spectrum.registries.SpectrumBiomeTags;
 import net.cosmicapiary.vivid_spirit.VividSpirit;
-import net.cosmicapiary.vivid_spirit.VividStructures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalBiomeTags;
@@ -33,6 +32,9 @@ public class ModWorldGen {
     public static final RegistryKey<PlacedFeature> SAPPHIC_PACKED_ICE =
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "sapphic_packed_ice"));
 
+    public static final RegistryKey<PlacedFeature> ALLURITE_GEODE =
+            RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "allurite_geode"));
+
 
     public static final RegistryKey<PlacedFeature> LUMISENE_LAKE =
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "lumisene_lake"));
@@ -58,6 +60,9 @@ public class ModWorldGen {
                 GenerationStep.Feature.TOP_LAYER_MODIFICATION, SAPPHIC_ICE);
         BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
                 GenerationStep.Feature.TOP_LAYER_MODIFICATION, SAPPHIC_PACKED_ICE);
+
+        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.IN_OVERWORLD),
+                GenerationStep.Feature.UNDERGROUND_ORES, ALLURITE_GEODE);
 
         BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
                 GenerationStep.Feature.UNDERGROUND_STRUCTURES, RegistryKey.of(RegistryKeys.PLACED_FEATURE, SpectrumCommon.locate("topaz_geode")));
