@@ -27,6 +27,8 @@ import org.slf4j.LoggerFactory;
 public class VividSpirit implements ModInitializer {
 	public static final String MOD_ID = "vivid_spirit";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final Item TOFU = Registry.register(Registries.ITEM, new Identifier("croptopia", "tofu"),
+			new Item(liquidPearlSettings()));
 	public static FlowableFluid STILL_SPIRIT;
 	public static FlowableFluid FLOWING_SPIRIT;
 	public static Item SPIRIT_BUCKET;
@@ -46,6 +48,9 @@ public class VividSpirit implements ModInitializer {
 
 		SPIRIT_BUCKET = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "spirit_bucket"),
 			new BucketItem(STILL_SPIRIT, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+
+		Registry.register(Registries.ITEM, new Identifier("croptopia", "tofu"),
+				new Item(liquidPearlSettings()));
 
 		SPIRIT = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "spirit"),
 			new FluidBlock(STILL_SPIRIT, FabricBlockSettings.copyOf(Blocks.WATER).luminance(15).mapColor(MapColor.BRIGHT_TEAL)));
@@ -69,9 +74,26 @@ public class VividSpirit implements ModInitializer {
 			new Item(new FabricItemSettings()));
 	public static final Item LIQUID_PEARLS = registerItem("liquid_pearls",
 			new Item(liquidPearlSettings()));
-	public static final Item TOFU = registerItem("tofu",
-			new Item(liquidPearlSettings()));
 
+	public static final Item RETALIATION_RING = registerItem("retaliation_ring",
+			new RetaliationRingItem(new FabricItemSettings()));
+
+	public static final Item ARID_SHARD = registerItem("arid_shard",
+			new BiomeEyeSwamp(new FabricItemSettings()));
+	public static final Item FLORAL_SHARD = registerItem("floral_shard",
+			new BiomeEyeSwamp(new FabricItemSettings()));
+	public static final Item JUNGLE_SHARD = registerItem("jungle_shard",
+			new BiomeEyeSwamp(new FabricItemSettings()));
+	public static final Item MOUNTAIN_SHARD = registerItem("mountain_shard",
+			new BiomeEyeSwamp(new FabricItemSettings()));
+	public static final Item SAPPHIC_SHARD = registerItem("sapphic_shard",
+			new BiomeEyeSwamp(new FabricItemSettings()));
+	public static final Item SNOWCAP_SHARD = registerItem("snowcap_shard",
+			new BiomeEyeSwamp(new FabricItemSettings()));
+	public static final Item SNOWY_SHARD = registerItem("snowy_shard",
+			new BiomeEyeSwamp(new FabricItemSettings()));
+	public static final Item WETLAND_SHARD = registerItem("wetland_shard",
+			new BiomeEyeSwamp(new FabricItemSettings()));
 
 	public static final Block BLACKSLAG_ZINC_ORE = registerBlock("blackslag_zinc_ore",
 			new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE)

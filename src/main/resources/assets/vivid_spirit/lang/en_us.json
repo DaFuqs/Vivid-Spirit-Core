@@ -6,17 +6,27 @@
   "item.vivid_spirit.liquid_pearls": "Liquid Pearls",
   "item.vivid_spirit.frozen_ruby": "Frozen Ruby",
   "item.vivid_spirit.frozen_ruby_shard": "Frozen Ruby Shard",
-  "item.vivid_spirit.tofu": "Tofu",
+
+  "item.vivid_spirit.arid_shard": "Arid Shard",
+  "item.vivid_spirit.floral_shard": "Floral Shard",
+  "item.vivid_spirit.jungle_shard": "Jungle Shard",
+  "item.vivid_spirit.mountain_shard": "Mountain Shard",
+  "item.vivid_spirit.sapphic_shard": "Sapphic Shard",
+  "item.vivid_spirit.snowcap_shard": "Snowcap Shard",
+  "item.vivid_spirit.snowy_shard": "Snowy Shard",
+  "item.vivid_spirit.wetland_shard": "Wetland Shard",
 
   "item.vivid_spirit.topaz_tuned_shard": "Topaz Tuned Shard",
 
   "block.vivid_spirit.spirit": "Spirit",
 
+  "itemgroup.vividspirit": "Vivid Spirit",
+
   "block.vivid_spirit.sapphire_tiles": "Sapphire Tiles",
   "block.vivid_spirit.small_sapphire_tiles": "Small Sapphire Tiles",
   "block.vivid_spirit.large_sapphire_tiles": "Large Sapphire Tiles",
-  "block.vivid_spirit.sapphire_ice": "Sapphire Ice",
-  "block.vivid_spirit.sapphire_packed_ice": "Sapphire Packed Ice",
+  "block.vivid_spirit.sapphire_ice": "Sapphic Ice",
+  "block.vivid_spirit.sapphire_packed_ice": "Sapphic Packed Ice",
   "block.vivid_spirit.black_ice": "Black Ice",
   "block.vivid_spirit.blackslag_zinc_ore": "Blackslag Zinc Ore",
   "block.vivid_spirit.large_ruby_bud": "Large Ruby Bud",

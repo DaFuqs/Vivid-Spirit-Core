@@ -7,7 +7,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.structure.Structure;
 
 public class VividStructures {
-    TagKey<Structure> TOPAZ_GEODE = of("topaz_geode");
+    public static final TagKey<Structure> SWAMP = of("swamp");
 
     public static final TagKey<Biome> COLD = with("cold");
 
