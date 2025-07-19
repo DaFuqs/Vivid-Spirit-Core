@@ -49,9 +49,6 @@ public class VividSpirit implements ModInitializer {
 		SPIRIT_BUCKET = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "spirit_bucket"),
 			new BucketItem(STILL_SPIRIT, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
-		Registry.register(Registries.ITEM, new Identifier("croptopia", "tofu"),
-				new Item(liquidPearlSettings()));
-
 		SPIRIT = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "spirit"),
 			new FluidBlock(STILL_SPIRIT, FabricBlockSettings.copyOf(Blocks.WATER).luminance(15).mapColor(MapColor.BRIGHT_TEAL)));
 	}
