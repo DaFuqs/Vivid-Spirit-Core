@@ -15,6 +15,16 @@
     "vivid_spirit:blackslag_zinc_ore",
     "vivid_spirit:starry_clump",
     "vivid_spirit:shimmerstone_ore",
+    "vivid_spirit:budding_allurite_block",
+    "vivid_spirit:budding_lumiere_block",
+    "vivid_spirit:small_allurite_bud",
+    "vivid_spirit:small_lumiere_bud",
+    "vivid_spirit:medium_allurite_bud",
+    "vivid_spirit:medium_lumiere_bud",
+    "vivid_spirit:large_allurite_bud",
+    "vivid_spirit:large_lumiere_bud",
+    "vivid_spirit:allurite_cluster",
+    "vivid_spirit:lumiere_cluster",
     "vivid_spirit:floestone_redstone_ore"
 
   ]

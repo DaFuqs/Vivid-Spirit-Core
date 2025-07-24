@@ -1,11 +1,11 @@
 {
   "parent": "item/amethyst_bud",
   "textures": {
-    "layer0": "vivid_spirit:block/large_ruby_bud"
+    "layer0": "vivid_spirit:block/medium_lumiere_bud"
   },
   "display": {
     "fixed": {
-      "translation": [ 0, 4, 0 ]
+      "translation": [ 0, 6, 0 ]
     }
   }
 }

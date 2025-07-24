@@ -1,10 +1,12 @@
 package net.cosmicapiary.vivid_spirit;
 
+import de.dafuqs.spectrum.blocks.gemstone.SpectrumBuddingBlock;
 import de.dafuqs.spectrum.blocks.geology.ShimmerstoneOreBlock;
 import de.dafuqs.spectrum.items.trinkets.InkDrainTrinketItem;
 import de.dafuqs.spectrum.registries.SpectrumAdvancements;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
 
+import de.dafuqs.spectrum.registries.SpectrumSoundEvents;
 import net.cosmicapiary.vivid_spirit.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,6 +15,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.id.paradiselost.blocks.ParadiseLostBlocks;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.fluid.FlowableFluid;
@@ -135,7 +138,6 @@ public class VividSpirit implements ModInitializer {
 	public static final Block RUBY_CLUSTER = registerBlock("ruby_cluster",
 			new AmethystClusterBlock(7, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
 			));
-
 	//public static final Block DECAYED_ONYX = registerBlock("decayed_onyx", new Block(FabricBlockSettings.copyOf(SpectrumBlocks.ONYX_BLOCK)		));
 
 	public static final Block PURE_SILVER_BLOCK = registerBlock("pure_silver_block",
@@ -150,6 +152,45 @@ public class VividSpirit implements ModInitializer {
 	public static final Block SILVER_CLUSTER = registerBlock("silver_cluster",
 			new AmethystClusterBlock(7, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
 			));
+
+	public static final Block SMALL_ALLURITE_BUD = registerBlock("small_allurite_bud",
+			new AmethystClusterBlock(3, 4, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
+			));
+
+	public static final Block MEDIUM_ALLURITE_BUD = registerBlock("medium_allurite_bud",
+			new AmethystClusterBlock(4, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
+			));
+
+	public static final Block LARGE_ALLURITE_BUD = registerBlock("large_allurite_bud",
+			new AmethystClusterBlock(5, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
+			));
+
+	public static final Block ALLURITE_CLUSTER = registerBlock("allurite_cluster",
+			new AmethystClusterBlock(7, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
+			));
+
+	public static final Block BUDDING_ALLURITE_BLOCK = registerBlock("budding_allurite_block",
+			new SpectrumBuddingBlock(FabricBlockSettings.copyOf(Blocks.BUDDING_AMETHYST).pistonBehavior(PistonBehavior.DESTROY).ticksRandomly(), SMALL_ALLURITE_BUD, MEDIUM_ALLURITE_BUD, LARGE_ALLURITE_BUD, ALLURITE_CLUSTER, SpectrumSoundEvents.BLOCK_CITRINE_BLOCK_HIT, SpectrumSoundEvents.BLOCK_CITRINE_BLOCK_CHIME));
+
+	public static final Block SMALL_LUMIERE_BUD = registerBlock("small_lumiere_bud",
+			new AmethystClusterBlock(3, 4, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
+			));
+
+	public static final Block MEDIUM_LUMIERE_BUD = registerBlock("medium_lumiere_bud",
+			new AmethystClusterBlock(4, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
+			));
+
+	public static final Block LARGE_LUMIERE_BUD = registerBlock("large_lumiere_bud",
+			new AmethystClusterBlock(5, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
+			));
+
+	public static final Block LUMIERE_CLUSTER = registerBlock("lumiere_cluster",
+			new AmethystClusterBlock(7, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
+			));
+
+	public static final Block BUDDING_LUMIERE_BLOCK = registerBlock("budding_lumiere_block",
+			new SpectrumBuddingBlock(FabricBlockSettings.copyOf(Blocks.BUDDING_AMETHYST).pistonBehavior(PistonBehavior.DESTROY).ticksRandomly(), SMALL_LUMIERE_BUD, MEDIUM_LUMIERE_BUD, LARGE_LUMIERE_BUD, LUMIERE_CLUSTER, SpectrumSoundEvents.BLOCK_CITRINE_BLOCK_HIT, SpectrumSoundEvents.BLOCK_CITRINE_BLOCK_CHIME));
+
 
 	private static Block registerBlock(String name, Block block){
 		registerBlockItem(name, block);

@@ -28,6 +28,16 @@ public class ModItemGroups {
         entries.add(VividSpirit.LARGE_SILVER_BUD);
         entries.add(VividSpirit.RUBY_CLUSTER);
         entries.add(VividSpirit.SILVER_CLUSTER);
+        entries.add(VividSpirit.BUDDING_ALLURITE_BLOCK);
+        entries.add(VividSpirit.SMALL_ALLURITE_BUD);
+        entries.add(VividSpirit.MEDIUM_ALLURITE_BUD);
+        entries.add(VividSpirit.LARGE_ALLURITE_BUD);
+        entries.add(VividSpirit.ALLURITE_CLUSTER);
+        entries.add(VividSpirit.BUDDING_LUMIERE_BLOCK);
+        entries.add(VividSpirit.SMALL_LUMIERE_BUD);
+        entries.add(VividSpirit.MEDIUM_LUMIERE_BUD);
+        entries.add(VividSpirit.LARGE_LUMIERE_BUD);
+        entries.add(VividSpirit.LUMIERE_CLUSTER);
         entries.add(VividSpirit.STARRY_CLUMP);
         entries.add(VividSpirit.LIQUID_PEARLS);
         entries.add(VividSpirit.TOFU);

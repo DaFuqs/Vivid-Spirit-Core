@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "vivid_spirit:block/medium_lumiere_bud",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "vivid_spirit:block/medium_lumiere_bud",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "vivid_spirit:block/medium_lumiere_bud",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "vivid_spirit:block/medium_lumiere_bud",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "vivid_spirit:block/medium_lumiere_bud"
+    },
+    "facing=west": {
+      "model": "vivid_spirit:block/medium_lumiere_bud",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

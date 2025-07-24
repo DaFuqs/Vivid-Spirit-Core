@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "vivid_spirit:block/ruby_cluster"
+    "layer0": "vivid_spirit:block/lumiere_cluster"
   },
   "display": {
     "head": {

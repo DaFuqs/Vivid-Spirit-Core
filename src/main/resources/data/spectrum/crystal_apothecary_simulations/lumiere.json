@@ -1,0 +1,17 @@
+{
+  "budding_block": "vivid_spirit:budding_lumiere_block",
+  "valid_neighbor_blocks": [
+    "vivid_spirit:small_lumiere_bud",
+    "vivid_spirit:medium_lumiere_bud",
+    "vivid_spirit:large_lumiere_bud",
+    "vivid_spirit:lumiere_cluster",
+    "minecraft:air",
+    "minecraft:cave_air",
+    "minecraft:water"
+  ],
+  "ticks_for_compensation_loot_per_valid_neighbor": 10000,
+  "compensated_loot": {
+    "item": "galosphere:lumiere_shard",
+    "count": 2
+  }
+}
