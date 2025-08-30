@@ -40,6 +40,7 @@ public class VividSpirit implements ModInitializer {
 	public void onInitialize() {
 		ModWorldGen.addFeatures();
 		ModItemGroups.registerItemGroups();
+		VividBlockEntities.register();
 
 		LOGGER.info("Self-replicating blue goo initialization process...");
 
@@ -94,6 +95,10 @@ public class VividSpirit implements ModInitializer {
 			new BiomeEyeSwamp(new FabricItemSettings()));
 	public static final Item WETLAND_SHARD = registerItem("wetland_shard",
 			new BiomeEyeSwamp(new FabricItemSettings()));
+
+	public static final Block PIGMENT_SIPHON = registerBlock("pigment_siphon",
+			new PigmentSiphonBlock(FabricBlockSettings.copyOf(SpectrumBlocks.CRYSTAL_APOTHECARY)
+			));
 
 	public static final Block BLACKSLAG_ZINC_ORE = registerBlock("blackslag_zinc_ore",
 			new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE)
