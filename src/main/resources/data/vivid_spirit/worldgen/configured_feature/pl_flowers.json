@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:lake",
+  "config": {
+    "barrier": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "galosphere:lumiere_block"
+      }
+    },
+    "fluid": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "supplementaries:lumisene",
+        "Properties": {
+          "level": "0"
+        }
+      }
+    }
+  }
+}

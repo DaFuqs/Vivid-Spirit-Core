@@ -26,6 +26,9 @@ public class ModWorldGen {
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "pl_onyx"));
     public static final RegistryKey<PlacedFeature> PL_REDSTONE =
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "pl_redstone"));
+    public static final RegistryKey<PlacedFeature> PL_FLOWERS =
+            RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "pl_flowers"));
+
 
     public static final RegistryKey<PlacedFeature> SAPPHIC_ICE =
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "sapphic_ice"));
@@ -50,6 +53,8 @@ public class ModWorldGen {
                 GenerationStep.Feature.UNDERGROUND_ORES, DD_SILVER_ORE);
         BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
                 GenerationStep.Feature.LAKES, LUMISENE_LAKE);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
+                GenerationStep.Feature.VEGETAL_DECORATION, PL_FLOWERS);
         BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
                 GenerationStep.Feature.UNDERGROUND_ORES, PL_SHIMMERSTONE);
         BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),

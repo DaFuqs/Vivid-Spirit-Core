@@ -58,7 +58,6 @@ public class ModItemGroups {
         entries.add(VividSpirit.SNOWCAP_SHARD);
         entries.add(VividSpirit.SNOWY_SHARD);
         entries.add(VividSpirit.WETLAND_SHARD);
-        entries.add(VividSpirit.PIGMENT_SIPHON);
 
 
     }).build());
