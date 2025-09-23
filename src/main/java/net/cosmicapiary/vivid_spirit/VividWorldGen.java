@@ -1,8 +1,7 @@
-package net.cosmicapiary.vivid_spirit.world.gen;
+package net.cosmicapiary.vivid_spirit;
 
 import de.dafuqs.spectrum.SpectrumCommon;
 import de.dafuqs.spectrum.registries.SpectrumBiomeTags;
-import net.cosmicapiary.vivid_spirit.VividSpirit;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalBiomeTags;
@@ -13,7 +12,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 
-public class ModWorldGen {
+public class VividWorldGen {
     public static final RegistryKey<PlacedFeature> LAKE_MUD =
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "lake_mud_surface"));
     public static final RegistryKey<PlacedFeature> DD_ZINC_ORE =
@@ -28,6 +27,11 @@ public class ModWorldGen {
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "pl_redstone"));
     public static final RegistryKey<PlacedFeature> PL_FLOWERS =
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "pl_flowers"));
+
+    public static final RegistryKey<PlacedFeature> PL_BRILLIANT =
+            RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "pl_brilliant"));
+    public static final RegistryKey<PlacedFeature> PL_SOULSTONE =
+            RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "pl_soulstone"));
 
 
     public static final RegistryKey<PlacedFeature> SAPPHIC_ICE =
@@ -61,6 +65,10 @@ public class ModWorldGen {
                 GenerationStep.Feature.UNDERGROUND_ORES, PL_ONYX);
         BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
                 GenerationStep.Feature.UNDERGROUND_ORES, PL_REDSTONE);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
+                GenerationStep.Feature.UNDERGROUND_ORES, PL_SOULSTONE);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
+                GenerationStep.Feature.UNDERGROUND_ORES, PL_BRILLIANT);
         BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
                 GenerationStep.Feature.TOP_LAYER_MODIFICATION, SAPPHIC_ICE);
         BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),

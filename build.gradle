@@ -51,6 +51,10 @@ dependencies {
 	}
 
 	modImplementation("maven.modrinth:paradise-lost:${project.paradise_lost_version}")
+	modImplementation("maven.modrinth:malum:${project.malum_version}")
+	modImplementation("maven.modrinth:lodestonelib:${project.lodestone_version}")
+	modImplementation("maven.modrinth:porting_lib:${project.porting_lib_version}")
+	include("maven.modrinth:porting_lib:${project.porting_lib_version}")
 	modImplementation("maven.modrinth:supplementaries:${project.supplementaries_version}")
 	modImplementation("maven.modrinth:galosphere:${project.galosphere_version}")
 	modImplementation("maven.modrinth:exclusions-lib:${project.exclusionslib_version}")

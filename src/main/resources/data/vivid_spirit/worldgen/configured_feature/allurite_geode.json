@@ -5,7 +5,7 @@
       "alternate_inner_layer_provider": {
         "type": "minecraft:simple_state_provider",
         "state": {
-          "Name": "paradise_lost:bloomed_calcite"
+          "Name": "vivid_spirit:budding_lumiere_block"
         }
       },
       "cannot_replace": "#minecraft:features_cannot_replace",
@@ -18,12 +18,6 @@
       "inner_layer_provider": {
         "type": "minecraft:weighted_state_provider",
         "entries": [
-          {
-            "data": {
-            "Name": "galosphere:allurite_block"
-            },
-            "weight": 1
-          },
           {
             "data": {
               "Name": "galosphere:lumiere_block"
@@ -42,20 +36,6 @@
         },
         {
           "Name": "galosphere:glinted_lumiere_cluster",
-          "Properties": {
-            "facing": "up",
-            "waterlogged": "true"
-          }
-        },
-        {
-          "Name": "galosphere:glinted_allurite_cluster",
-          "Properties": {
-            "facing": "up",
-            "waterlogged": "true"
-          }
-        },
-        {
-          "Name": "galosphere:allurite_cluster",
           "Properties": {
             "facing": "up",
             "waterlogged": "true"
@@ -102,8 +82,8 @@
     "outer_wall_distance": {
       "type": "minecraft:uniform",
       "value": {
-        "max_inclusive": 6,
-        "min_inclusive": 4
+        "max_inclusive": 5,
+        "min_inclusive": 3
       }
     },
     "placements_require_layer0_alternate": true,

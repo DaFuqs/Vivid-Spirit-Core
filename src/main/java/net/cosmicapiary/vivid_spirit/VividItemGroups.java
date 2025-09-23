@@ -8,7 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.text.Text;
 
-public class ModItemGroups {
+public class VividItemGroups {
     public static final ItemGroup STARFIELDS = Registry.register(Registries.ITEM_GROUP,
     new Identifier(VividSpirit.MOD_ID, "vivid_spirit"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.vividspirit"))

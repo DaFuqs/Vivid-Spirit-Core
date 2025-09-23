@@ -3,11 +3,8 @@ package net.cosmicapiary.vivid_spirit;
 import de.dafuqs.spectrum.blocks.gemstone.SpectrumBuddingBlock;
 import de.dafuqs.spectrum.blocks.geology.ShimmerstoneOreBlock;
 import de.dafuqs.spectrum.items.trinkets.InkDrainTrinketItem;
-import de.dafuqs.spectrum.registries.SpectrumAdvancements;
-import de.dafuqs.spectrum.registries.SpectrumBlocks;
+import de.dafuqs.spectrum.registries.*;
 
-import de.dafuqs.spectrum.registries.SpectrumSoundEvents;
-import net.cosmicapiary.vivid_spirit.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 
 
@@ -38,8 +35,8 @@ public class VividSpirit implements ModInitializer {
 	public static Block SPIRIT;
 	@Override
 	public void onInitialize() {
-		ModWorldGen.addFeatures();
-		ModItemGroups.registerItemGroups();
+		VividWorldGen.addFeatures();
+		VividItemGroups.registerItemGroups();
 
 		LOGGER.info("Self-replicating blue goo initialization process...");
 
@@ -55,6 +52,10 @@ public class VividSpirit implements ModInitializer {
 		SPIRIT = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "spirit"),
 			new FluidBlock(STILL_SPIRIT, FabricBlockSettings.copyOf(Blocks.WATER).luminance(15).mapColor(MapColor.BRIGHT_TEAL)));
 	}
+
+	public static final Item BEDROCK_SCYTHE = new BedrockScytheItem(SpectrumItems.BEDROCK_MATERIAL, 6, -2.4F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability()));
+
+
 	public static final Block BLACK_ICE = registerBlock("black_ice",
 			new Block(FabricBlockSettings.copyOf(Blocks.BLUE_ICE)
 					.mapColor(MapColor.BLACK)
