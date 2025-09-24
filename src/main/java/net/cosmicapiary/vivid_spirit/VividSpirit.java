@@ -38,7 +38,7 @@ public class VividSpirit implements ModInitializer {
 		VividWorldGen.addFeatures();
 		VividItemGroups.registerItemGroups();
 
-		LOGGER.info("Self-replicating blue goo initialization process...");
+		LOGGER.info("Replicating blue goo... (Vivid Spirit)");
 
 		STILL_SPIRIT = Registry.register(Registries.FLUID, new Identifier(MOD_ID, "spirit"),
 			new SpiritFluid.Still());
@@ -54,7 +54,7 @@ public class VividSpirit implements ModInitializer {
 	}
 
 	public static final Item BEDROCK_SCYTHE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "bedrock_scythe"),
-			new BedrockScytheItem(SpectrumItems.BEDROCK_MATERIAL, 6, -2.4F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability()))
+			new BedrockScytheItem(SpectrumItems.BEDROCK_MATERIAL, -3, 0.1F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability()))
 	);
 
 

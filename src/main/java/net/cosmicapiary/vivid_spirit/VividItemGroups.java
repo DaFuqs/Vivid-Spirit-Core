@@ -58,6 +58,7 @@ public class VividItemGroups {
         entries.add(VividSpirit.SNOWCAP_SHARD);
         entries.add(VividSpirit.SNOWY_SHARD);
         entries.add(VividSpirit.WETLAND_SHARD);
+        entries.add(VividSpirit.BEDROCK_SCYTHE);
 
 
     }).build());

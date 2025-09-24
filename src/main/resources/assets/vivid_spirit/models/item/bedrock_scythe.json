@@ -1,15 +1,14 @@
 {
-  "parent": "item/handheld",
-  "loader": "forge:separate_transforms",
-  "base": {
-    "parent": "malum:item/bedrock_scythe_handheld"
+  "parent": "spectrum:item/handheld_oversized",
+  "textures": {
+    "layer0": "vivid_spirit:item/bedrock_scythe"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "malum:item/bedrock_scythe_gui"
-    },
-    "fixed": {
-      "parent": "malum:item/bedrock_scythe_gui"
+  "overrides": [
+    {
+      "predicate": {
+        "oversized": 1
+      },
+      "model": "vivid_spirit:item/bedrock_scythe_oversized"
     }
-  }
+  ]
 }
