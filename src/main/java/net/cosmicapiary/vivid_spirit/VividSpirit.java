@@ -53,7 +53,9 @@ public class VividSpirit implements ModInitializer {
 			new FluidBlock(STILL_SPIRIT, FabricBlockSettings.copyOf(Blocks.WATER).luminance(15).mapColor(MapColor.BRIGHT_TEAL)));
 	}
 
-	public static final Item BEDROCK_SCYTHE = new BedrockScytheItem(SpectrumItems.BEDROCK_MATERIAL, 6, -2.4F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability()));
+	public static final Item BEDROCK_SCYTHE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "bedrock_scythe"),
+			new BedrockScytheItem(SpectrumItems.BEDROCK_MATERIAL, 6, -2.4F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability()))
+	);
 
 
 	public static final Block BLACK_ICE = registerBlock("black_ice",

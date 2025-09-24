@@ -33,8 +33,7 @@
 		"java": ">=17",
 		"fabric-api": "*",
 		"spectrum": "*",
-		"paradise_lost": "*",
-		"galosphere": "*"
+		"paradise_lost": "*"
 	},
 	"suggests": {
 		"another-mod": "*"

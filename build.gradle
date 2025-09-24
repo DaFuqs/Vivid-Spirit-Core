@@ -20,7 +20,7 @@ repositories {
 	// for more information about repositories.
 	maven { url = "https://maven.is-immensely.gay/releases" } // Spectrum, AEA
 	maven { url = "https://maven.shedaniel.me/" } // Cloth Config, REI
-	maven { url = "https://maven.terraformersmc.com/" } // Modmenu, EMI
+	maven { url = "https://maven.terraformersmc.com/" } // Modmenu, EMI, Wood API
 	maven { url = "https://api.modrinth.com/maven" } // Revelationary, Fractal
 	maven { url = "https://maven.nucleoid.xyz/" } // Common Protection API
 	maven { url = "https://maven.ladysnake.org/releases" } // Cardinal Components API
@@ -28,7 +28,7 @@ repositories {
 	maven { url = "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/" } // Modonomicon
 	maven { url = "https://maven.blamejared.com" } // JEI
 	maven { url = "https://jitpack.io" } // Arrowhead, Dimensional Reverb, Step Height Entity Attribute
-	maven { url = "https://mvn.devos.one/releases/" }
+	maven { url = "https://mvn.devos.one/releases/" } // Porting Lib
 	maven {
 		name = "Kyrptonaught"
 		url = uri("https://maven.kyrptonaught.dev/")
@@ -56,6 +56,8 @@ dependencies {
 	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:tool_actions:${project.porting_lib_version}"))
 	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:blocks:${project.porting_lib_version}"))
 	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:networking:${project.porting_lib_version}"))
+	include("com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_api_version}")
+	modImplementation("com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_api_version}")
 
 	modImplementation("maven.modrinth:paradise-lost:${project.paradise_lost_version}")
 	modImplementation("maven.modrinth:malum:${project.malum_version}")
