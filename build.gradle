@@ -4,6 +4,7 @@ plugins {
 	id 'fabric-loom' version '1.7-SNAPSHOT'
 	id 'maven-publish'
 }
+
 version = project.mod_version
 group = project.maven_group
 
@@ -27,7 +28,7 @@ repositories {
 	maven { url = "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/" } // Modonomicon
 	maven { url = "https://maven.blamejared.com" } // JEI
 	maven { url = "https://jitpack.io" } // Arrowhead, Dimensional Reverb, Step Height Entity Attribute
-
+	maven { url = "https://mvn.devos.one/releases/" }
 	maven {
 		name = "Kyrptonaught"
 		url = uri("https://maven.kyrptonaught.dev/")
@@ -50,11 +51,15 @@ dependencies {
 		exclude(group: "maven.modrinth:colorful-hearts")
 	}
 
+	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:items:${project.porting_lib_version}"))
+	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:base:${project.porting_lib_version}"))
+	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:tool_actions:${project.porting_lib_version}"))
+	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:blocks:${project.porting_lib_version}"))
+	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:networking:${project.porting_lib_version}"))
+
 	modImplementation("maven.modrinth:paradise-lost:${project.paradise_lost_version}")
 	modImplementation("maven.modrinth:malum:${project.malum_version}")
 	modImplementation("maven.modrinth:lodestonelib:${project.lodestone_version}")
-	modImplementation("maven.modrinth:porting_lib:${project.porting_lib_version}")
-	include("maven.modrinth:porting_lib:${project.porting_lib_version}")
 	modImplementation("maven.modrinth:supplementaries:${project.supplementaries_version}")
 	modImplementation("maven.modrinth:galosphere:${project.galosphere_version}")
 	modImplementation("maven.modrinth:exclusions-lib:${project.exclusionslib_version}")

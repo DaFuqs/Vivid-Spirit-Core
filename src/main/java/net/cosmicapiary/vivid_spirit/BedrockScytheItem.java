@@ -7,7 +7,7 @@ import net.minecraft.enchantment.*;
 import net.minecraft.item.*;
 import java.util.*;
 
-public class BedrockScytheItem extends MalumScytheItem implements Preenchanted {
+public class BedrockScytheItem extends MalumScytheItem  {
 
     public BedrockScytheItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
@@ -16,6 +16,7 @@ public class BedrockScytheItem extends MalumScytheItem implements Preenchanted {
     @Override
     public boolean isDamageable() { return false; }
 
+    /*
     @Override
     public Map<Enchantment, Integer> getDefaultEnchantments() {return Map.of(EnchantmentRegistry.HAUNTED, 3);}
 
@@ -23,6 +24,7 @@ public class BedrockScytheItem extends MalumScytheItem implements Preenchanted {
     public ItemStack getDefaultStack() {
         return getDefaultEnchantedStack(this);
     }
+   */
 
     @Override
     public boolean isEnchantable(ItemStack stack) {
