@@ -7,6 +7,7 @@
   "item.vivid_spirit.frozen_ruby": "Frozen Ruby",
   "item.vivid_spirit.frozen_ruby_shard": "Frozen Ruby Shard",
   "item.vivid_spirit.bedrock_scythe": "Bedrock Scythe",
+  "item.vivid_spirit.bedrock_knife": "Bedrock Knife",
 
   "item.vivid_spirit.arid_shard": "Arid Shard",
   "item.vivid_spirit.floral_shard": "Floral Shard",
@@ -17,11 +18,13 @@
   "item.vivid_spirit.snowy_shard": "Snowy Shard",
   "item.vivid_spirit.wetland_shard": "Wetland Shard",
 
-  "item.vivid_spirit.topaz_tuned_shard": "Topaz Tuned Shard",
-
   "block.vivid_spirit.spirit": "Spirit",
 
-  "itemgroup.vividspirit": "Vivid Spirit",
+  "block.vivid_spirit.pigment_siphon": "Pigment Siphon",
+  "block.vivid_spirit.pigment_siphon.owner": "%s's Pigment Siphon",
+  "block.vivid_spirit.pigment_siphon.tooltip": "§7If functioning, passively collects Pigment from colored leaves.",
+
+  "itemgroup.vividspirit": "Vivid Items",
 
   "block.vivid_spirit.sapphire_tiles": "Sapphire Tiles",
   "block.vivid_spirit.small_sapphire_tiles": "Small Sapphire Tiles",

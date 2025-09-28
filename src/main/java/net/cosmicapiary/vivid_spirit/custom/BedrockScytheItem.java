@@ -1,4 +1,4 @@
-package net.cosmicapiary.vivid_spirit;
+package net.cosmicapiary.vivid_spirit.custom;
 
 import com.sammy.malum.common.item.curiosities.weapons.scythe.MagicScytheItem;
 import com.sammy.malum.registry.common.item.EnchantmentRegistry;

@@ -1,6 +1,5 @@
-package net.cosmicapiary.vivid_spirit;
+package net.cosmicapiary.vivid_spirit.custom;
 
-import de.dafuqs.spectrum.registries.SpectrumStructureTags;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EyeOfEnderEntity;
@@ -23,8 +22,8 @@ import net.minecraft.world.RaycastContext.FluidHandling;
 import net.minecraft.world.event.GameEvent;
 import net.minecraft.world.event.GameEvent.Emitter;
 
-public class BiomeEyeSwamp extends Item {
-    public BiomeEyeSwamp(Item.Settings settings) {
+public class BiomeEyeItem extends Item {
+    public BiomeEyeItem(Item.Settings settings) {
         super(settings);
     }
 

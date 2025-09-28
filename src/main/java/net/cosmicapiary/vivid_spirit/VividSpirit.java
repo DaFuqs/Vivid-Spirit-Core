@@ -5,6 +5,7 @@ import de.dafuqs.spectrum.blocks.geology.ShimmerstoneOreBlock;
 import de.dafuqs.spectrum.items.trinkets.InkDrainTrinketItem;
 import de.dafuqs.spectrum.registries.*;
 
+import net.cosmicapiary.vivid_spirit.custom.*;
 import net.fabricmc.api.ModInitializer;
 
 
@@ -37,6 +38,7 @@ public class VividSpirit implements ModInitializer {
 	public void onInitialize() {
 		VividWorldGen.addFeatures();
 		VividItemGroups.registerItemGroups();
+		VividBlockEntities.register();
 
 		LOGGER.info("Replicating blue goo... (Vivid Spirit)");
 
@@ -55,6 +57,11 @@ public class VividSpirit implements ModInitializer {
 
 	public static final Item BEDROCK_SCYTHE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "bedrock_scythe"),
 			new BedrockScytheItem(SpectrumItems.BEDROCK_MATERIAL, -3, 0.1F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability()))
+	);
+
+	public static final Item BEDROCK_KNIFE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "bedrock_knife"),
+			new BedrockKnifeItem(SpectrumItems.BEDROCK_MATERIAL, 3, -2F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability())) {
+			}
 	);
 
 
@@ -79,21 +86,25 @@ public class VividSpirit implements ModInitializer {
 			new Item(liquidPearlSettings()));
 
 	public static final Item ARID_SHARD = registerItem("arid_shard",
-			new BiomeEyeSwamp(new FabricItemSettings()));
+			new BiomeEyeItem(new FabricItemSettings()));
 	public static final Item FLORAL_SHARD = registerItem("floral_shard",
-			new BiomeEyeSwamp(new FabricItemSettings()));
+			new BiomeEyeItem(new FabricItemSettings()));
 	public static final Item JUNGLE_SHARD = registerItem("jungle_shard",
-			new BiomeEyeSwamp(new FabricItemSettings()));
+			new BiomeEyeItem(new FabricItemSettings()));
 	public static final Item MOUNTAIN_SHARD = registerItem("mountain_shard",
-			new BiomeEyeSwamp(new FabricItemSettings()));
+			new BiomeEyeItem(new FabricItemSettings()));
 	public static final Item SAPPHIC_SHARD = registerItem("sapphic_shard",
-			new BiomeEyeSwamp(new FabricItemSettings()));
+			new BiomeEyeItem(new FabricItemSettings()));
 	public static final Item SNOWCAP_SHARD = registerItem("snowcap_shard",
-			new BiomeEyeSwamp(new FabricItemSettings()));
+			new BiomeEyeItem(new FabricItemSettings()));
 	public static final Item SNOWY_SHARD = registerItem("snowy_shard",
-			new BiomeEyeSwamp(new FabricItemSettings()));
+			new BiomeEyeItem(new FabricItemSettings()));
 	public static final Item WETLAND_SHARD = registerItem("wetland_shard",
-			new BiomeEyeSwamp(new FabricItemSettings()));
+			new BiomeEyeItem(new FabricItemSettings()));
+
+	public static final Block PIGMENT_SIPHON = registerBlock("pigment_siphon",
+			new PigmentSiphonBlock(FabricBlockSettings.copyOf(SpectrumBlocks.CRYSTAL_APOTHECARY)
+			));
 
 	public static final Block BLACKSLAG_ZINC_ORE = registerBlock("blackslag_zinc_ore",
 			new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE)

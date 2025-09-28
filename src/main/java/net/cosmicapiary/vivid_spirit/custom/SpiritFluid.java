@@ -1,5 +1,6 @@
-package net.cosmicapiary.vivid_spirit;
+package net.cosmicapiary.vivid_spirit.custom;
 
+import net.cosmicapiary.vivid_spirit.VividSpirit;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;

@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.text.Text;
 
 public class VividItemGroups {
-    public static final ItemGroup STARFIELDS = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup VIVID_SPIRIT = Registry.register(Registries.ITEM_GROUP,
     new Identifier(VividSpirit.MOD_ID, "vivid_spirit"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.vividspirit"))
             .icon(() -> new ItemStack(VividSpirit.BLACK_ICE)).entries((displayContext, entries) -> {
@@ -59,6 +59,7 @@ public class VividItemGroups {
         entries.add(VividSpirit.SNOWY_SHARD);
         entries.add(VividSpirit.WETLAND_SHARD);
         entries.add(VividSpirit.BEDROCK_SCYTHE);
+        entries.add(VividSpirit.BEDROCK_KNIFE);
 
 
     }).build());
