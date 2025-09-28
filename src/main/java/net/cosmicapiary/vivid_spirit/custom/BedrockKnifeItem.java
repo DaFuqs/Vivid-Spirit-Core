@@ -9,7 +9,7 @@ import vectorwing.farmersdelight.common.item.KnifeItem;
 
 import java.util.Map;
 
-public abstract class BedrockKnifeItem extends KnifeItem implements Preenchanted {
+public class BedrockKnifeItem extends KnifeItem implements Preenchanted {
 
     public BedrockKnifeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
