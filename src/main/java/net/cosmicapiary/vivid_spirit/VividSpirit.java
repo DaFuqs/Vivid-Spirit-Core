@@ -151,6 +151,9 @@ public class VividSpirit implements ModInitializer {
 			));
 	//public static final Block DECAYED_ONYX = registerBlock("decayed_onyx", new Block(FabricBlockSettings.copyOf(SpectrumBlocks.ONYX_BLOCK)		));
 
+	public static final Block TIRAMISU = registerBlock("tiramisu",
+			new CakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)
+			));
 	public static final Block PURE_SILVER_BLOCK = registerBlock("pure_silver_block",
 			new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK)
 			));

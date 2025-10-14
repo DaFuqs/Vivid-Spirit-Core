@@ -1,0 +1,22 @@
+{
+    "textures": {
+        "particle": "vivid_spirit:block/tiramisu_side",
+        "bottom": "vivid_spirit:block/tiramisu_bottom",
+        "top": "vivid_spirit:block/tiramisu_top",
+        "side": "vivid_spirit:block/tiramisu_side",
+        "inside": "vivid_spirit:block/tiramisu_inner"
+    },
+    "elements": [
+        {   "from": [ 3, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down" },
+                "up":    { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west":  { "texture": "#inside" },
+                "east":  { "texture": "#side" }
+            }
+        }
+    ]
+}

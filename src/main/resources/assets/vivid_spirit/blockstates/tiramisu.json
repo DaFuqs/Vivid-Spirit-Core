@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "vivid_spirit:block/tiramisu"
+    },
+    "bites=1": {
+      "model": "vivid_spirit:block/tiramisu_slice1"
+    },
+    "bites=2": {
+      "model": "vivid_spirit:block/tiramisu_slice2"
+    },
+    "bites=3": {
+      "model": "vivid_spirit:block/tiramisu_slice3"
+    },
+    "bites=4": {
+      "model": "vivid_spirit:block/tiramisu_slice4"
+    },
+    "bites=5": {
+      "model": "vivid_spirit:block/tiramisu_slice5"
+    },
+    "bites=6": {
+      "model": "vivid_spirit:block/tiramisu_slice6"
+    }
+  }
+}
