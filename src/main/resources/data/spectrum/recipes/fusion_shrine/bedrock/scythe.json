@@ -9,19 +9,19 @@
   "copy_nbt": false,
   "ingredients": [
     {
-      "item": "farmersdelight:netherite_knife"
+      "item": "malum:soul_stained_steel_scythe"
     },
     {
       "item": "spectrum:bedrock_dust",
-      "count": 1
+      "count": 4
     },
     {
       "item": "spectrum:black_pigment",
-      "count": 1
+      "count": 4
     },
     {
       "item": "spectrum:onyx_powder",
-      "count": 1
+      "count": 4
     },
     {
       "item": "spectrum:stratine_gem",
@@ -29,15 +29,19 @@
     },
     {
       "item": "spectrum:stratine_fragments",
-      "count": 1
+      "count": 3
+    },
+    {
+      "item": "malum:eldritch_spirit",
+      "count": 16
     }
   ],
   "result": {
-    "item": "vivid_spirit:bedrock_knife",
+    "item": "vivid_spirit:bedrock_scythe",
     "nbt": {
       "Enchantments": [
         {
-          "id": "spectrum:first_strike",
+          "id": "malum:haunted",
           "lvl": "3s"
         }
       ]
