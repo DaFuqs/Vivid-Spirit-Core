@@ -20,10 +20,6 @@
 
   "block.vivid_spirit.spirit": "Spirit",
 
-  "block.vivid_spirit.pigment_siphon": "Pigment Siphon",
-  "block.vivid_spirit.pigment_siphon.owner": "%s's Pigment Siphon",
-  "block.vivid_spirit.pigment_siphon.tooltip": "§7If functioning, passively collects Pigment from colored leaves.",
-
   "itemgroup.vividspirit": "Vivid Items",
 
   "block.vivid_spirit.sapphire_tiles": "Sapphire Tiles",
@@ -41,6 +37,31 @@
   "block.vivid_spirit.small_silver_bud": "Small Silver Bud",
   "block.vivid_spirit.pure_silver_block": "Pure Silver Block",
   "block.vivid_spirit.silver_cluster": "Silver Cluster",
+
+  "block.vivid_spirit.moonstone_inlaid_calcite_column": "Moonstone Inlaid Calcite Column",
+  "block.vivid_spirit.moonstone_inlaid_basalt_column": "Moonstone Inlaid Basalt Column",
+  "block.vivid_spirit.moonstone_inlaid_calcite_crest": "Moonstone Inlaid Calcite Crest",
+  "block.vivid_spirit.moonstone_inlaid_basalt_crest": "Moonstone Inlaid Basalt Crest",
+  "block.vivid_spirit.amethyst_inlaid_calcite_column": "Amethyst Inlaid Calcite Column",
+  "block.vivid_spirit.amethyst_inlaid_basalt_column": "Amethyst Inlaid Basalt Column",
+  "block.vivid_spirit.amethyst_inlaid_calcite_crest": "Amethyst Inlaid Calcite Crest",
+  "block.vivid_spirit.amethyst_inlaid_basalt_crest": "Amethyst Inlaid Basalt Crest",
+  "block.vivid_spirit.citrine_inlaid_calcite_column": "Citrine Inlaid Calcite Column",
+  "block.vivid_spirit.citrine_inlaid_basalt_column": "Citrine Inlaid Basalt Column",
+  "block.vivid_spirit.citrine_inlaid_calcite_crest": "Citrine Inlaid Calcite Crest",
+  "block.vivid_spirit.citrine_inlaid_basalt_crest": "Citrine Inlaid Basalt Crest",
+  "block.vivid_spirit.topaz_inlaid_calcite_column": "Topaz Inlaid Calcite Column",
+  "block.vivid_spirit.topaz_inlaid_basalt_column": "Topaz Inlaid Basalt Column",
+  "block.vivid_spirit.topaz_inlaid_calcite_crest": "Topaz Inlaid Calcite Crest",
+  "block.vivid_spirit.topaz_inlaid_basalt_crest": "Topaz Inlaid Basalt Crest",
+  "block.vivid_spirit.onyx_inlaid_calcite_column": "Onyx Inlaid Calcite Column",
+  "block.vivid_spirit.onyx_inlaid_basalt_column": "Onyx Inlaid Basalt Column",
+  "block.vivid_spirit.onyx_inlaid_calcite_crest": "Onyx Inlaid Calcite Crest",
+  "block.vivid_spirit.onyx_inlaid_basalt_crest": "Onyx Inlaid Basalt Crest",
+
+  "block.vivid_spirit.stere_block": "Stere Block",
+  "block.vivid_spirit.polymer_clay": "Polymer Clay",
+  "block.vivid_spirit.flux_brick_column": "Flux Brick Column",
 
   "block.vivid_spirit.budding_allurite_block": "Budding Allurite Block",
   "block.vivid_spirit.budding_lumiere_block": "Budding Lumiere Block",

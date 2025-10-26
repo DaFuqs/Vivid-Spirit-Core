@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "vivid_spirit:block/flux_brick_column_top",
+    "side": "vivid_spirit:block/flux_brick_column"
+  }
+}

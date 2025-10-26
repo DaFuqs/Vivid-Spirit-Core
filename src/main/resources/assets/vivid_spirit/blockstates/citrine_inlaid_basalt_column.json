@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "vivid_spirit:block/citrine_inlaid_basalt_column",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "vivid_spirit:block/citrine_inlaid_basalt_column"
+    },
+    "axis=z": {
+      "model": "vivid_spirit:block/citrine_inlaid_basalt_column",
+      "x": 90
+    }
+  }
+}

@@ -1,8 +1,8 @@
 package net.cosmicapiary.vivid_spirit;
 
+import de.dafuqs.spectrum.blocks.decoration.CardinalFacingBlock;
 import de.dafuqs.spectrum.blocks.gemstone.SpectrumBuddingBlock;
 import de.dafuqs.spectrum.blocks.geology.ShimmerstoneOreBlock;
-import de.dafuqs.spectrum.items.trinkets.InkDrainTrinketItem;
 import de.dafuqs.spectrum.registries.*;
 
 import net.cosmicapiary.vivid_spirit.custom.*;
@@ -15,6 +15,7 @@ import net.id.paradiselost.blocks.ParadiseLostBlocks;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.*;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.registry.Registries;
@@ -38,7 +39,6 @@ public class VividSpirit implements ModInitializer {
 	public void onInitialize() {
 		VividWorldGen.addFeatures();
 		VividItemGroups.registerItemGroups();
-		VividBlockEntities.register();
 
 		LOGGER.info("Replicating blue goo... (Vivid Spirit)");
 
@@ -55,12 +55,14 @@ public class VividSpirit implements ModInitializer {
 			new FluidBlock(STILL_SPIRIT, FabricBlockSettings.copyOf(Blocks.WATER).luminance(15).mapColor(MapColor.BRIGHT_TEAL)));
 	}
 
+	public static final VividToolMaterials.ToolMaterial FAKE_BEDROCK = VividToolMaterials.ToolMaterial.FAKE_BEDROCK;
+
 	public static final Item BEDROCK_SCYTHE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "bedrock_scythe"),
-			new BedrockScytheItem(SpectrumItems.BEDROCK_MATERIAL, -3, 0.1F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability()))
+			new BedrockScytheItem(FAKE_BEDROCK, -3, 0.1F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability()))
 	);
 
 	public static final Item BEDROCK_KNIFE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "bedrock_knife"),
-			new BedrockKnifeItem(SpectrumItems.BEDROCK_MATERIAL, 3, -2F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability())) {
+			new BedrockKnifeItem(FAKE_BEDROCK, 3, -2F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability())) {
 			}
 	);
 
@@ -102,8 +104,98 @@ public class VividSpirit implements ModInitializer {
 	public static final Item WETLAND_SHARD = registerItem("wetland_shard",
 			new BiomeEyeItem(new FabricItemSettings()));
 
-	public static final Block PIGMENT_SIPHON = registerBlock("pigment_siphon",
-			new PigmentSiphonBlock(FabricBlockSettings.copyOf(SpectrumBlocks.CRYSTAL_APOTHECARY)
+	public static final Block FLUX_BRICK_COLUMN = registerBlock("flux_brick_column",
+			new PillarBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)
+			));
+	public static final Block STERE_BLOCK = registerBlock("stere_block",
+			new PillarBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG)
+			));
+	public static final Block POLYMER_CLAY = registerBlock("polymer_clay",
+			new PillarBlock(FabricBlockSettings.copyOf(Blocks.RED_WOOL)
+					.sounds(BlockSoundGroup.MUD_BRICKS)
+			));
+
+
+	public static final Block TOPAZ_INLAID_BASALT_COLUMN = registerBlock("topaz_inlaid_basalt_column",
+			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.TOPAZ_CHISELED_BASALT)
+					.luminance(7)
+			));
+	public static final Block TOPAZ_INLAID_CALCITE_COLUMN = registerBlock("topaz_inlaid_calcite_column",
+			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.TOPAZ_CHISELED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block AMETHYST_INLAID_BASALT_COLUMN = registerBlock("amethyst_inlaid_basalt_column",
+			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.AMETHYST_CHISELED_BASALT)
+					.luminance(7)
+			));
+	public static final Block AMETHYST_INLAID_CALCITE_COLUMN = registerBlock("amethyst_inlaid_calcite_column",
+			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.AMETHYST_CHISELED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block CITRINE_INLAID_BASALT_COLUMN = registerBlock("citrine_inlaid_basalt_column",
+			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.CITRINE_CHISELED_BASALT)
+					.luminance(7)
+			));
+	public static final Block CITRINE_INLAID_CALCITE_COLUMN = registerBlock("citrine_inlaid_calcite_column",
+			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.CITRINE_CHISELED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block ONYX_INLAID_BASALT_COLUMN = registerBlock("onyx_inlaid_basalt_column",
+			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.ONYX_CHISELED_BASALT)
+					.luminance(7)
+			));
+	public static final Block ONYX_INLAID_CALCITE_COLUMN = registerBlock("onyx_inlaid_calcite_column",
+			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.ONYX_CHISELED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block MOONSTONE_INLAID_BASALT_COLUMN = registerBlock("moonstone_inlaid_basalt_column",
+			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.MOONSTONE_CHISELED_BASALT)
+					.luminance(7)
+			));
+	public static final Block MOONSTONE_INLAID_CALCITE_COLUMN = registerBlock("moonstone_inlaid_calcite_column",
+			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.MOONSTONE_CHISELED_CALCITE)
+					.luminance(7)
+			));
+
+	public static final Block TOPAZ_INLAID_BASALT_CREST = registerBlock("topaz_inlaid_basalt_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(SpectrumBlocks.TOPAZ_CHISELED_BASALT)
+					.luminance(7)
+			));
+	public static final Block TOPAZ_INLAID_CALCITE_CREST = registerBlock("topaz_inlaid_calcite_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(SpectrumBlocks.TOPAZ_CHISELED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block AMETHYST_INLAID_BASALT_CREST = registerBlock("amethyst_inlaid_basalt_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(SpectrumBlocks.AMETHYST_CHISELED_BASALT)
+					.luminance(7)
+			));
+	public static final Block AMETHYST_INLAID_CALCITE_CREST = registerBlock("amethyst_inlaid_calcite_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(SpectrumBlocks.AMETHYST_CHISELED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block CITRINE_INLAID_BASALT_CREST = registerBlock("citrine_inlaid_basalt_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(SpectrumBlocks.CITRINE_CHISELED_BASALT)
+					.luminance(7)
+			));
+	public static final Block CITRINE_INLAID_CALCITE_CREST = registerBlock("citrine_inlaid_calcite_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(SpectrumBlocks.CITRINE_CHISELED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block ONYX_INLAID_BASALT_CREST = registerBlock("onyx_inlaid_basalt_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(SpectrumBlocks.ONYX_CHISELED_BASALT)
+					.luminance(7)
+			));
+	public static final Block ONYX_INLAID_CALCITE_CREST = registerBlock("onyx_inlaid_calcite_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(SpectrumBlocks.ONYX_CHISELED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block MOONSTONE_INLAID_BASALT_CREST = registerBlock("moonstone_inlaid_basalt_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(SpectrumBlocks.MOONSTONE_CHISELED_BASALT)
+					.luminance(7)
+			));
+	public static final Block MOONSTONE_INLAID_CALCITE_CREST = registerBlock("moonstone_inlaid_calcite_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(SpectrumBlocks.MOONSTONE_CHISELED_CALCITE)
+					.luminance(7)
 			));
 
 	public static final Block BLACKSLAG_ZINC_ORE = registerBlock("blackslag_zinc_ore",
@@ -149,11 +241,7 @@ public class VividSpirit implements ModInitializer {
 	public static final Block RUBY_CLUSTER = registerBlock("ruby_cluster",
 			new AmethystClusterBlock(7, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
 			));
-	//public static final Block DECAYED_ONYX = registerBlock("decayed_onyx", new Block(FabricBlockSettings.copyOf(SpectrumBlocks.ONYX_BLOCK)		));
 
-	public static final Block TIRAMISU = registerBlock("tiramisu",
-			new CakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)
-			));
 	public static final Block PURE_SILVER_BLOCK = registerBlock("pure_silver_block",
 			new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK)
 			));
@@ -218,21 +306,10 @@ public class VividSpirit implements ModInitializer {
 		return Registry.register(Registries.ITEM, new Identifier(VividSpirit.MOD_ID, name), item);
 	}
 
-	private static Item registerTrinket(String name, InkDrainTrinketItem item) {
-		return Registry.register(Registries.ITEM, new Identifier(VividSpirit.MOD_ID, name), item);
-	}
-
 	private static FabricItemSettings liquidPearlSettings() {
 		return new FabricItemSettings().food(new FoodComponent.Builder().hunger(4).saturationModifier((float) 0.4)
 				.alwaysEdible()
 				.snack().build());
 	}
 
-	public static class IS {
-
-		public static FabricItemSettings of(int maxCount, Rarity rarity) {
-			return new FabricItemSettings().maxCount(maxCount).rarity(rarity);
-		}
-
-	}
 }

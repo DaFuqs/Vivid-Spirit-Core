@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "vivid_spirit:block/polymer_clay_back",
+    "side": "vivid_spirit:block/polymer_clay"
+  }
+}

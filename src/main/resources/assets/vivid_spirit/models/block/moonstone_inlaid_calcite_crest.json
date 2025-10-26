@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "spectrum:block/polished_calcite_crest_top",
+    "side": "vivid_spirit:block/moonstone_inlaid_calcite_crest"
+  }
+}
