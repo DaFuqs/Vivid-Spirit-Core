@@ -6,9 +6,12 @@ import net.minecraft.recipe.Ingredient;
 
 import java.util.function.Supplier;
 
+import static net.minecraft.item.ToolMaterials.IRON;
+
 public class VividToolMaterials {
 
     public enum ToolMaterial implements net.minecraft.item.ToolMaterial {
+        FAKE_CRYSTAL(IRON.getMiningLevel(), 16, 4.0F, 2.0F, 10, Ingredient::empty),
         FAKE_BEDROCK(4, 0, 15.0F, 5.0F, 3, () -> Ingredient.ofItems(SpectrumItems.BEDROCK_DUST));
 
         private final int miningLevel;

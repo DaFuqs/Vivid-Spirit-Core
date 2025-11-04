@@ -68,6 +68,12 @@ public class VividItemGroups {
         entries.add(VividSpirit.MOONSTONE_INLAID_BASALT_CREST);
         entries.add(VividSpirit.MOONSTONE_INLAID_CALCITE_COLUMN);
         entries.add(VividSpirit.MOONSTONE_INLAID_CALCITE_CREST);
+        entries.add(VividSpirit.ALLURITE_INLAID_BLOOMED_CALCITE_CREST);
+        entries.add(VividSpirit.ALLURITE_INLAID_BLOOMED_CALCITE_COLUMN);
+        entries.add(VividSpirit.LUMIERE_INLAID_BLOOMED_CALCITE_COLUMN);
+        entries.add(VividSpirit.LUMIERE_INLAID_BLOOMED_CALCITE_CREST);
+        entries.add(VividSpirit.POLISHED_BLOOMED_CALCITE_COLUMN);
+        entries.add(VividSpirit.POLISHED_BLOOMED_CALCITE_CREST);
         entries.add(VividSpirit.STERE_BLOCK);
         entries.add(VividSpirit.FLUX_BRICK_COLUMN);
         entries.add(VividSpirit.POLYMER_CLAY);
@@ -83,6 +89,7 @@ public class VividItemGroups {
         entries.add(VividSpirit.WETLAND_SHARD);
         entries.add(VividSpirit.BEDROCK_SCYTHE);
         entries.add(VividSpirit.BEDROCK_KNIFE);
+        entries.add(VividSpirit.CEREMONIAL_FALCHION);
 
 
     }).build());

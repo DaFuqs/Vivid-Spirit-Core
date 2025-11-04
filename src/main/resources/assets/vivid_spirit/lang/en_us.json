@@ -8,6 +8,7 @@
   "item.vivid_spirit.frozen_ruby_shard": "Frozen Ruby Shard",
   "item.vivid_spirit.bedrock_scythe": "Bedrock Scythe",
   "item.vivid_spirit.bedrock_knife": "Bedrock Knife",
+  "item.vivid_spirit.ceremonial_falchion": "Ceremonial Falchion",
 
   "item.vivid_spirit.arid_shard": "Arid Shard",
   "item.vivid_spirit.floral_shard": "Floral Shard",
@@ -37,6 +38,13 @@
   "block.vivid_spirit.small_silver_bud": "Small Silver Bud",
   "block.vivid_spirit.pure_silver_block": "Pure Silver Block",
   "block.vivid_spirit.silver_cluster": "Silver Cluster",
+
+  "block.vivid_spirit.allurite_inlaid_bloomed_calcite_column": "Allurite Inlaid Bloomed Calcite Column",
+  "block.vivid_spirit.lumiere_inlaid_bloomed_calcite_column": "Lumiere Inlaid Bloomed Calcite Column",
+  "block.vivid_spirit.polished_bloomed_calcite_column": "Polished Bloomed Calcite Column",
+  "block.vivid_spirit.polished_bloomed_calcite_crest": "Polished Bloomed Calcite Crest",
+  "block.vivid_spirit.allurite_inlaid_bloomed_calcite_crest": "Allurite Inlaid Bloomed Calcite Crest",
+  "block.vivid_spirit.lumiere_inlaid_bloomed_calcite_crest": "Lumiere Inlaid Bloomed Calcite Crest",
 
   "block.vivid_spirit.moonstone_inlaid_calcite_column": "Moonstone Inlaid Calcite Column",
   "block.vivid_spirit.moonstone_inlaid_basalt_column": "Moonstone Inlaid Basalt Column",

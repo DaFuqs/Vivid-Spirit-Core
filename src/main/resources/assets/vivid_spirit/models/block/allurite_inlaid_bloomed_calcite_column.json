@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "vivid_spirit:block/allurite_inlaid_bloomed_calcite_pillar_cap",
+    "side": "vivid_spirit:block/allurite_inlaid_bloomed_calcite_pillar"
+  }
+}

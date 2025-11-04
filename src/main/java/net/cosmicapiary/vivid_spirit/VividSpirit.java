@@ -56,6 +56,7 @@ public class VividSpirit implements ModInitializer {
 	}
 
 	public static final VividToolMaterials.ToolMaterial FAKE_BEDROCK = VividToolMaterials.ToolMaterial.FAKE_BEDROCK;
+	public static final VividToolMaterials.ToolMaterial FAKE_CRYSTAL = VividToolMaterials.ToolMaterial.FAKE_CRYSTAL;
 
 	public static final Item BEDROCK_SCYTHE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "bedrock_scythe"),
 			new BedrockScytheItem(FAKE_BEDROCK, -3, 0.1F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability()))
@@ -63,6 +64,11 @@ public class VividSpirit implements ModInitializer {
 
 	public static final Item BEDROCK_KNIFE = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "bedrock_knife"),
 			new BedrockKnifeItem(FAKE_BEDROCK, 3, -2F, SpectrumItems.IS.of(Rarity.UNCOMMON).fireproof().maxDamage(SpectrumToolMaterials.ToolMaterial.BEDROCK.getDurability())) {
+			}
+	);
+
+	public static final Item CEREMONIAL_FALCHION = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "ceremonial_falchion"),
+			new CeremonialFalchionItem(FAKE_CRYSTAL, 4, -2.2F, SpectrumItems.IS.of(Rarity.UNCOMMON).maxDamage(SpectrumToolMaterials.ToolMaterial.LOW_HEALTH.getDurability())) {
 			}
 	);
 
@@ -155,6 +161,29 @@ public class VividSpirit implements ModInitializer {
 	public static final Block MOONSTONE_INLAID_CALCITE_COLUMN = registerBlock("moonstone_inlaid_calcite_column",
 			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.MOONSTONE_CHISELED_CALCITE)
 					.luminance(7)
+			));
+
+	public static final Block ALLURITE_INLAID_BLOOMED_CALCITE_COLUMN = registerBlock("allurite_inlaid_bloomed_calcite_column",
+			new PillarBlock(FabricBlockSettings.copyOf(ParadiseLostBlocks.BLOOMED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block LUMIERE_INLAID_BLOOMED_CALCITE_COLUMN = registerBlock("lumiere_inlaid_bloomed_calcite_column",
+			new PillarBlock(FabricBlockSettings.copyOf(ParadiseLostBlocks.BLOOMED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block ALLURITE_INLAID_BLOOMED_CALCITE_CREST = registerBlock("allurite_inlaid_bloomed_calcite_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(ParadiseLostBlocks.BLOOMED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block LUMIERE_INLAID_BLOOMED_CALCITE_CREST = registerBlock("lumiere_inlaid_bloomed_calcite_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(ParadiseLostBlocks.BLOOMED_CALCITE)
+					.luminance(7)
+			));
+	public static final Block POLISHED_BLOOMED_CALCITE_COLUMN = registerBlock("polished_bloomed_calcite_column",
+			new PillarBlock(FabricBlockSettings.copyOf(ParadiseLostBlocks.BLOOMED_CALCITE)
+			));
+	public static final Block POLISHED_BLOOMED_CALCITE_CREST = registerBlock("polished_bloomed_calcite_crest",
+			new CardinalFacingBlock(FabricBlockSettings.copyOf(ParadiseLostBlocks.BLOOMED_CALCITE)
 			));
 
 	public static final Block TOPAZ_INLAID_BASALT_CREST = registerBlock("topaz_inlaid_basalt_crest",
