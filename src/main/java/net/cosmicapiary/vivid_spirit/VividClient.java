@@ -33,6 +33,8 @@ public class VividClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(VividSpirit.MEDIUM_LUMIERE_BUD, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(VividSpirit.LARGE_LUMIERE_BUD, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(VividSpirit.PIGMENT_PEDESTAL, RenderLayer.getCutout());
+
     }
 
 

@@ -1,0 +1,7 @@
+{
+  "parent": "spectrum:templates/pedestal",
+  "textures": {
+    "pedestal": "vivid_spirit:block/pigment_pedestal",
+    "particle": "vivid_spirit:block/pigment_pedestal_breaking"
+  }
+}

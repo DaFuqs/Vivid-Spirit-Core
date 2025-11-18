@@ -3,6 +3,8 @@ package net.cosmicapiary.vivid_spirit;
 import de.dafuqs.spectrum.blocks.decoration.CardinalFacingBlock;
 import de.dafuqs.spectrum.blocks.gemstone.SpectrumBuddingBlock;
 import de.dafuqs.spectrum.blocks.geology.ShimmerstoneOreBlock;
+import de.dafuqs.spectrum.blocks.pedestal.BuiltinPedestalVariant;
+import de.dafuqs.spectrum.blocks.pedestal.PedestalBlock;
 import de.dafuqs.spectrum.registries.*;
 
 import net.cosmicapiary.vivid_spirit.custom.*;
@@ -121,6 +123,10 @@ public class VividSpirit implements ModInitializer {
 					.sounds(BlockSoundGroup.MUD_BRICKS)
 			));
 
+	public static final Block PIGMENT_PEDESTAL = registerBlock("pigment_pedestal",
+			new PedestalBlock(FabricBlockSettings.copyOf(SpectrumBlocks.PEDESTAL_BASIC_TOPAZ).sounds(BlockSoundGroup.STONE),
+					VividPedestalVariant.PRE_GEM
+			));
 
 	public static final Block TOPAZ_INLAID_BASALT_COLUMN = registerBlock("topaz_inlaid_basalt_column",
 			new PillarBlock(FabricBlockSettings.copyOf(SpectrumBlocks.TOPAZ_CHISELED_BASALT)

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SRS",
+    "WTW",
+    "CTC"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:leather"
+    },
+    "W": {
+      "item": "spectrum:polished_calcite"
+    },
+    "C": {
+      "item": "spectrum:polished_basalt"
+    },
+    "R": {
+      "tag": "c:dyes"
+    },
+    "T": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "vivid_spirit:pigment_pedestal",
+    "count": 1
+  }
+}
