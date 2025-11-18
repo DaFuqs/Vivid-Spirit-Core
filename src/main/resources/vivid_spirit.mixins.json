@@ -3,6 +3,8 @@
 	"package": "net.cosmicapiary.vivid_spirit.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"CookingRecipeSerializerMixin",
+		"AbstractFurnaceBlockEntityMixin"
 	],
 	"client": [
 		"ItemRendererAccessor",
