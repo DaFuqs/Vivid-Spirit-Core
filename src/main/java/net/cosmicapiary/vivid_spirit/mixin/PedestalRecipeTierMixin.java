@@ -42,7 +42,7 @@ abstract class PedestalRecipeTierMixin {
 				SpectrumAdvancements.BUILD_ADVANCED_PEDESTAL_STRUCTURE,
 				SpectrumAdvancements.BUILD_COMPLEX_PEDESTAL_STRUCTURE
 		};
-		
+
 		for (int i = 0; i < $VALUES.length; i++) {
 			PedestalRecipeTier tier = $VALUES[i];
 			newTiers[i + 1] = init(tier.name(), tier.ordinal() + 1, VANILLA_ADVANCMENTS[i], tier.getAvailableGemstoneColors());
