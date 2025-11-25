@@ -1,30 +1,27 @@
 package net.cosmicapiary.vivid_spirit.mixin;
 
-import com.llamalad7.mixinextras.sugar.Local;
 import de.dafuqs.spectrum.inventories.PedestalScreenHandler;
 import de.dafuqs.spectrum.inventories.slots.DisabledSlot;
+import de.dafuqs.spectrum.inventories.slots.StackFilterSlot;
 import de.dafuqs.spectrum.recipe.pedestal.PedestalRecipeTier;
+import de.dafuqs.spectrum.registries.SpectrumItems;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeMatcher;
 import net.minecraft.recipe.book.RecipeBookCategory;
 import net.minecraft.screen.AbstractRecipeScreenHandler;
-import net.minecraft.screen.PropertyDelegate;
-import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
-import net.minecraft.util.math.BlockPos;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.gen.Invoker;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.Redirect;
+
+import java.util.Set;
 
 @Mixin(PedestalScreenHandler.class)
 abstract class PedestalScreenHandlerMixin extends AbstractRecipeScreenHandler<Inventory> {
@@ -90,14 +87,17 @@ abstract class PedestalScreenHandlerMixin extends AbstractRecipeScreenHandler<In
 		return false;
 	}
 
-	@Inject(method = "<init>(Lnet/minecraft/screen/ScreenHandlerType;Lnet/minecraft/screen/ScreenHandlerContext;Lnet/minecraft/recipe/book/RecipeBookCategory;ILnet/minecraft/entity/player/PlayerInventory;Lnet/minecraft/inventory/Inventory;Lnet/minecraft/screen/PropertyDelegate;IILnet/minecraft/util/math/BlockPos;)V", at = @At(value = "INVOKE", target = "Lde/dafuqs/spectrum/inventories/PedestalScreenHandler;addSlot(Lnet/minecraft/screen/slot/Slot;)Lnet/minecraft/screen/slot/Slot;", ordinal = 8, shift = At.Shift.AFTER))
-	private void disableGemSlots(ScreenHandlerType type, ScreenHandlerContext context, RecipeBookCategory recipeBookCategory, int i, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate propertyDelegate, int pedestalRecipeTier, int maxRecipeTier, BlockPos pedestalPos, CallbackInfo ci) {
-		if (this.pedestalRecipeTier == PedestalRecipeTier.valueOf("PRE_GEM")) {
-			this.addSlot(new DisabledSlot(inventory, 9, -2000, 77));
-			this.addSlot(new DisabledSlot(inventory, 10, -2000, 77));
-			this.addSlot(new DisabledSlot(inventory, 11, -2000, 77));
-			this.addSlot(new DisabledSlot(inventory, 12, -2000, 77));
-			this.addSlot(new DisabledSlot(inventory, 13, -2000, 77));
+	@Shadow @Final private Inventory inventory;
+
+	@Redirect(method = "<init>(Lnet/minecraft/screen/ScreenHandlerType;Lnet/minecraft/screen/ScreenHandlerContext;Lnet/minecraft/recipe/book/RecipeBookCategory;ILnet/minecraft/entity/player/PlayerInventory;Lnet/minecraft/inventory/Inventory;Lnet/minecraft/screen/PropertyDelegate;IILnet/minecraft/util/math/BlockPos;)V", at = @At(value = "INVOKE", target = "Lde/dafuqs/spectrum/inventories/PedestalScreenHandler;addSlot(Lnet/minecraft/screen/slot/Slot;)Lnet/minecraft/screen/slot/Slot;"))
+	private Slot disableGemSlots(PedestalScreenHandler instance, Slot slot) {
+		if (instance.getPedestalRecipeTier() == PedestalRecipeTier.valueOf("PRE_GEM"))
+		{
+			Set<ItemStack> GEMSTONE_POWDERS = Set.of(SpectrumItems.TOPAZ_POWDER.getDefaultStack(), SpectrumItems.AMETHYST_POWDER.getDefaultStack(), SpectrumItems.CITRINE_POWDER.getDefaultStack());
+			if (slot instanceof StackFilterSlot filter && GEMSTONE_POWDERS.stream().anyMatch(filter::canInsert)) {
+				return this.addSlot(new DisabledSlot(inventory, slot.getIndex(), -2000, 77));
+			}
 		}
+		return this.addSlot(slot);
 	}
 }
