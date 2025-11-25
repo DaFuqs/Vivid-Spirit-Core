@@ -22,6 +22,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 import java.util.Set;
+import java.util.stream.Stream;
 
 @Mixin(PedestalScreenHandler.class)
 abstract class PedestalScreenHandlerMixin extends AbstractRecipeScreenHandler<Inventory> {
@@ -93,8 +94,8 @@ abstract class PedestalScreenHandlerMixin extends AbstractRecipeScreenHandler<In
 	private Slot disableGemSlots(PedestalScreenHandler instance, Slot slot) {
 		if (instance.getPedestalRecipeTier() == PedestalRecipeTier.valueOf("PRE_GEM"))
 		{
-			Set<ItemStack> GEMSTONE_POWDERS = Set.of(SpectrumItems.TOPAZ_POWDER.getDefaultStack(), SpectrumItems.AMETHYST_POWDER.getDefaultStack(), SpectrumItems.CITRINE_POWDER.getDefaultStack());
-			if (slot instanceof StackFilterSlot filter && GEMSTONE_POWDERS.stream().anyMatch(filter::canInsert)) {
+			Stream<ItemStack> GEMSTONE_POWDERS = Stream.of(SpectrumItems.TOPAZ_POWDER.getDefaultStack(), SpectrumItems.AMETHYST_POWDER.getDefaultStack(), SpectrumItems.CITRINE_POWDER.getDefaultStack());
+			if (slot instanceof StackFilterSlot filter && GEMSTONE_POWDERS.anyMatch(filter::canInsert)) {
 				return this.addSlot(new DisabledSlot(inventory, slot.getIndex(), -2000, 77));
 			}
 		}
