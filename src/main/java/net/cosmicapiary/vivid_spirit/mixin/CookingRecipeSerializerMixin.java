@@ -18,7 +18,9 @@ abstract class CookingRecipeSerializerMixin<T extends AbstractCookingRecipe> imp
 
 	@Inject(method = "read(Lnet/minecraft/util/Identifier;Lcom/google/gson/JsonObject;)Lnet/minecraft/recipe/AbstractCookingRecipe;", at = @At("RETURN"))
 	private void addCountToOutput(Identifier identifier, JsonObject jsonObject, CallbackInfoReturnable<T> cir, @Local ItemStack itemStack) {
-		int count = JsonHelper.getInt(jsonObject, "resultcount", 1);
-		itemStack.setCount(count);
+		if (itemStack.getCount() == 1) {
+			int count = JsonHelper.getInt(jsonObject, "resultcount", 1);
+			itemStack.setCount(count);
+		}
 	}
 }
