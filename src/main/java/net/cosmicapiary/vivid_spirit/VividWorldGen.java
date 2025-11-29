@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalBiomeTags;
 import net.id.paradiselost.tag.ParadiseLostStructureTags;
+import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 
 public class VividWorldGen {
@@ -38,6 +39,8 @@ public class VividWorldGen {
                 GenerationStep.Feature.TOP_LAYER_MODIFICATION, VividPlacedFeatures.PL_SAPPHIC_PACKED_ICE);
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.IN_OVERWORLD),
                 GenerationStep.Feature.UNDERGROUND_ORES, VividPlacedFeatures.ALLURITE_GEODE);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DEEP_DARK),
+                GenerationStep.Feature.VEGETAL_DECORATION, VividPlacedFeatures.ECHO_CLUSTER);
     }
 }
 

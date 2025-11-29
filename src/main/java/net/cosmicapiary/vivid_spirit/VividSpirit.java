@@ -306,6 +306,10 @@ public class VividSpirit implements ModInitializer {
 			new AmethystClusterBlock(7, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
 			));
 
+	public static final Block ECHO_CLUSTER = registerBlock("echo_cluster",
+			new AmethystClusterBlock(7, 3, FabricBlockSettings.copyOf(Blocks.AMETHYST_CLUSTER)
+			));
+
 	public static final Block BUDDING_ALLURITE_BLOCK = registerBlock("budding_allurite_block",
 			new SpectrumBuddingBlock(FabricBlockSettings.copyOf(Blocks.BUDDING_AMETHYST).pistonBehavior(PistonBehavior.DESTROY).ticksRandomly(), SMALL_ALLURITE_BUD, MEDIUM_ALLURITE_BUD, LARGE_ALLURITE_BUD, ALLURITE_CLUSTER, SpectrumSoundEvents.BLOCK_CITRINE_BLOCK_HIT, SpectrumSoundEvents.BLOCK_CITRINE_BLOCK_CHIME));
 

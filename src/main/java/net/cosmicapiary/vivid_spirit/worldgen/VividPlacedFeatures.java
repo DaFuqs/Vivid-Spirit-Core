@@ -39,6 +39,8 @@ public class VividPlacedFeatures {
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "lake_mud_surface"));
     public static final RegistryKey<PlacedFeature> ALLURITE_GEODE =
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "allurite_geode"));
+    public static final RegistryKey<PlacedFeature> ECHO_CLUSTER =
+            RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "allurite_geode"));
 
     //MISC
     public static final RegistryKey<PlacedFeature> MANA_TREE =

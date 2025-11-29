@@ -38,6 +38,7 @@ public class VividItemGroups {
         entries.add(VividSpirit.MEDIUM_LUMIERE_BUD);
         entries.add(VividSpirit.LARGE_LUMIERE_BUD);
         entries.add(VividSpirit.LUMIERE_CLUSTER);
+        entries.add(VividSpirit.ECHO_CLUSTER);
         entries.add(VividSpirit.STARRY_CLUMP);
         entries.add(VividSpirit.LIQUID_PEARLS);
         entries.add(VividSpirit.TOFU);
