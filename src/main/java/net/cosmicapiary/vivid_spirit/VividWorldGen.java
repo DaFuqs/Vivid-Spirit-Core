@@ -41,6 +41,9 @@ public class VividWorldGen {
                 GenerationStep.Feature.UNDERGROUND_ORES, VividPlacedFeatures.ALLURITE_GEODE);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DEEP_DARK),
                 GenerationStep.Feature.VEGETAL_DECORATION, VividPlacedFeatures.ECHO_CLUSTER);
+
+        BiomeModifications.addFeature(BiomeSelectors.tag(ParadiseLostStructureTags.VAULT_HAS_STRUCTURE),
+                GenerationStep.Feature.UNDERGROUND_STRUCTURES, VividPlacedFeatures.TOPAZ_GEODE);
     }
 }
 

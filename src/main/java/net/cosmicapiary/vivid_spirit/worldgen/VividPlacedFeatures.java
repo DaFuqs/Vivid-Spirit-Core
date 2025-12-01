@@ -28,6 +28,9 @@ public class VividPlacedFeatures {
     public static final RegistryKey<PlacedFeature> PL_SAPPHIC_PACKED_ICE =
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "sapphic_packed_ice"));
 
+    public static final RegistryKey<PlacedFeature> TOPAZ_GEODE =
+            RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "topaz_geode"));
+
     //PARADISE - MISC
     public static final RegistryKey<PlacedFeature> PL_FLOWERS =
             RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(VividSpirit.MOD_ID, "pl_flowers"));
